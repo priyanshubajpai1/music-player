@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Music Player</title>
+</head> 
+<body class="bg-black flex flex-col h-screen justify-center">
+    <div class="flex flex-col">
+        <h1 class="text-center text-white text-xl">Dive into the world of music</h1>
+        <div class="flex flex-col gap-y-3 text-center mt-4 bg-gray-900 w-[30%] mx-auto pt-10 pb-10 rounded-lg h-[80%] text-lg items-center justify-center">
+            <h2 class="title text-white mb-4 mt-7">Song Title</h2>
+            <audio class="audio"></audio>
+            <div class="flex justify-center gap-x-6 flex-wrap gap-y-2">
+                <button class="prev text-white bg-blue-700 px-4 py-1 rounded">Prev</button>
+                <button class="play-pause text-white bg-blue-700 px-4 py-1 rounded">Play</button>
+                <button class="next text-white bg-blue-700 px-4 py-1 rounded">Next</button>
+            </div>
+            <div class="flex flex-col gap-y-5">
+                <button class="skip text-white bg-blue-700 py-1 px-4 rounded mx-auto">Skip</button>
+                <input class="volume w-[60%] mx-auto" type="range" min="0" max="1" step="0.01"/>
+                <div>
+                    <ul class="playlist text-white flex flex-wrap gap-x-7 justify-center mb-7">
+                        <li class="track cursor-pointer" data-src="audio/song1.mp3">Song 1</li>
+                        <li class="track cursor-pointer" data-src="audio/song2.mp3">Song 2</li>
+                        <li class="track cursor-pointer" data-src="audio/song3.mp3">Song 3</li>
+                        <li class="track cursor-pointer" data-src="audio/song4.mp3">Song 4</li>
+                        <li class="track cursor-pointer" data-src="audio/song5.mp3">Song 5</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
